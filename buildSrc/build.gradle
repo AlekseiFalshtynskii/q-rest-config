@@ -1,0 +1,8 @@
+apply from: "../gradle/libraries.gradle"
+apply from: '../gradle/repositories.gradle'
+
+dependencies {
+    implementation platform("ru.b.q:q-dependencies:${qDependenciesVersion}")
+
+    implementation "io.spring.dependency-management:io.spring.dependency-management.gradle.plugin"
+}
