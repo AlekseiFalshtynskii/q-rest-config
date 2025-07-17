@@ -1,6 +1,6 @@
 # Библиотека единой конфигурации RestTemplate
 
-#### 3.0.0
+#### 3.0.1
 
 Поддерживает Spring boot 3.3.4, JDK 21
 
@@ -18,7 +18,7 @@ implementation "ru.b.q:q-rest-config"
 #### 2. Реализовать конфиг бинов темплейтов с применением дефолтной конфигурации
 
 ~~~
-import static ru.b.q.rest.config.DefaultRestTemplateConfig.defaultRestTemplate;
+import static ru.b.q.rest.config.RestUtils.restTemplate;
 
 @Configuration
 @RequiredArgsConstructor
@@ -29,13 +29,7 @@ public class RestTemplateConfig {
 
   @Bean
   public RestTemplate authRestTemplate() {
-    return restTemplate(authApi);
-  }
-
-  private RestTemplate restTemplate(Api api) {
-    var restTemplate = defaultRestTemplate();
-    restTemplate.setUriTemplateHandler(new DefaultUriBuilderFactory(api.getServiceUrl()));
-    return restTemplate;
+    return restTemplate(authApi.getServiceUrl());
   }
 }
 ~~~
