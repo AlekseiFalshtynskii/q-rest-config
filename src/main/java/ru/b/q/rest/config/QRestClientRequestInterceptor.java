@@ -11,7 +11,7 @@ import org.springframework.http.client.ClientHttpRequestExecution;
 import org.springframework.http.client.ClientHttpRequestInterceptor;
 import org.springframework.http.client.ClientHttpResponse;
 
-public class RestTemplateDefaultInterceptor implements ClientHttpRequestInterceptor {
+public class QRestClientRequestInterceptor implements ClientHttpRequestInterceptor {
 
   @SneakyThrows
   @Override
