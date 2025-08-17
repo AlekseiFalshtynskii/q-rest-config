@@ -7,7 +7,7 @@ plugins {
 apply from: "gradle/libraries.gradle"
 apply from: "gradle/repositories.gradle"
 
-version = "3.0.1"
+version = "3.4.0"
 group = "ru.b.q"
 compileJava.options.encoding = "UTF-8"
 compileTestJava.options.encoding = "UTF-8"
